@@ -20,8 +20,8 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
  obj = validation_messages[key]; 
  for (prop in obj ) {      
  if (owns.call(obj, prop)){   
- if (/image/i.test(prop)){
-    console.log(prop);
+ if (/image/i.test(obj[prop])){
+    console.log(obj[prop]);
 
  var datatest = prop;
   if (/http/i.test(datatest)){
