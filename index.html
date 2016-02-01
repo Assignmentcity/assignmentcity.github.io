@@ -29,12 +29,14 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
   }
  }              
  else if
- (/descr/i.test(prop)){
+ (/alt/i.test(prop)){
  var itemalt = obj[prop];
+  console.log(obj[prop]);
+
  }  
  }
  }
-  $('#main').append("<article class='thumb'><a href='" + itemimage + "' class='image'><img src='" + itemimage + "' alt='' /></a><h2>" + itemalt + "</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
+ // $('#main').append("<article class='thumb'><a href='" + itemimage + "' class='image'><img src='" + itemimage + "' alt='' /></a><h2>" + itemalt + "</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
  }
  }
  });
