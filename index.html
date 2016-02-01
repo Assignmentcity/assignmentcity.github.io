@@ -20,11 +20,14 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
  for (prop in obj ) {      
  if (owns.call(obj, prop)){   
  if (/image/i.test(prop)){
- var itemimage = obj[prop];
+ var datatest = prop;
+  if (/http/i.test(datatest)){
+  var itemimage = (datatest);
+  }
  }              
  else if
  (/image/i.test(prop)){   
- var itemalt = obj[prop];
+ var itemalt = prop;
  }  
  }
  }
