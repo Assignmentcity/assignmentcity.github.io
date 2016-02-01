@@ -19,11 +19,7 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
     success: function(data) {
     	      console.log(data.results);
       //$('body').append(data.results);
-      $('#main').append("<article class='thumb'>
-	<a href='https://res.cloudinary.com/lln42o2ke/image/upload/v1453583297/01_vi7ivj.jpg' class='image'><img src='http://res.cloudinary.com/lln42o2ke/image/upload/v1453583147/01_gohswo.jpg' alt='' /></a>
-	<h2>Magna feugiat lorem</h2>
-	<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>"
-	);
+      $('#main').append("<article class='thumb'><a href='https://res.cloudinary.com/lln42o2ke/image/upload/v1453583297/01_vi7ivj.jpg' class='image'><img src='http://res.cloudinary.com/lln42o2ke/image/upload/v1453583147/01_gohswo.jpg' alt='' /></a><h2>Magna feugiat lorem</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
     }
 });
 </script>
