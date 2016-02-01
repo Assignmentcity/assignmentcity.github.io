@@ -25,8 +25,6 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
  
  var datatest = obj[prop];
   if (/http/i.test(datatest)){
-    console.log(datatest);
-
   var itemimage = (datatest);
   }
  }              
@@ -34,11 +32,10 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
  (/image/i.test(prop)){   
  var itemalt = prop;
  }  
- }
-  alert(itemimage);
+  $('#main').append("<article class='thumb'><a href='" + itemimage + "' class='image'><img src='" + itemimage + "' alt='' /></a><h2>" + itemalt + "</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
 
  }
- //$('#main').append("<article class='thumb'><a href='" + itemimage + "' class='image'><img src='" + itemimage + "' alt='' /></a><h2>" + itemalt + "</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
+ }
  }
  }
  });
