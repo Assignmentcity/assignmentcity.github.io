@@ -19,17 +19,22 @@ function health() {var uid = localStorage.getItem('uid');var ref = new Firebase(
  obj = validation_messages[key]; 
  for (prop in obj ) {      
  if (owns.call(obj, prop)){   
- if (/image/i.test(prop)){ 
- alert(obj[prop]);
+ if (/image/i.test(prop)){
+localStorage.setItem('itemimage', obj[prop]);
+//alert(obj[prop]);
  //$('#imageplaceholder').html(obj[prop]);
  }              
  else if
- (/descr/i.test(prop)){    
-  alert(obj[prop]);
+ (/alt/i.test(prop)){   
+  localStorage.setItem('itemalt', obj[prop]);
+ // alert(obj[prop]);
  //$('#description').html(obj[prop]);  
  //$('#noidea').css('display', 'none');
  }  
- }         
+ }
+ var itemimage = localStorage.getItem(itemimage);
+ var itemalt = localStorage.getItem(itemalt);
+ $('#main').append("<article class='thumb'><a href='" + itemimage + "' class='image'><img src='http://res.cloudinary.com/lln42o2ke/image/upload/v1453583147/01_gohswo.jpg' alt='' /></a><h2>" + itemalt + "</h2><p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>	</article>");
  }
  }
  }
