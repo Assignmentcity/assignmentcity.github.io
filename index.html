@@ -13,7 +13,7 @@ function mainclick()  {
     var text = $(this).text();
 alert(text);
   
-});
+};
 //function mainclick()  {if (/fastur/i.test(localStorage.getItem('domain'))){var uid = localStorage.getItem('uid');var ref = new Firebase("https://vct.firebaseio.com/users/" + uid);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.mainclick);$("head").append(actions);});}else{var org = localStorage.getItem('domain');var ref = new Firebase("https://vct.firebaseio.com/organisations/" + org);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.mainclick);$("head").append(actions);});};};
 function send() {if (/fastur/i.test(localStorage.getItem('domain'))){var uid = localStorage.getItem('uid');var ref = new Firebase("https://vct.firebaseio.com/users/" + uid);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.send);$("head").append(actions);});}else{var org = localStorage.getItem('domain');var ref = new Firebase("https://vct.firebaseio.com/organisations/" + org);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.send);$("head").append(actions);});};};
 function start() {if (/fastur/i.test(localStorage.getItem('domain'))){var uid = localStorage.getItem('uid');var ref = new Firebase("https://vct.firebaseio.com/users/" + uid);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.start);$("head").append(actions);});}else{var org = localStorage.getItem('domain');var ref = new Firebase("https://vct.firebaseio.com/organisations/" + org);ref.on("value", function(snapshot) {var newPost = snapshot.val();var actions = (newPost.start);$("head").append(actions);});};};
