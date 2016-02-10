@@ -59,6 +59,7 @@ db.child('functions').child(uid).once('value', function(snapshot){
     }});};
 </script>
 <script>
+domain = localStorage.getItem("domainwp");
   var handler = StripeCheckout.configure({
     key: 'pk_live_mdufsEUxVMK742qsZEJz4keg',
     image: 'https://www.stripe.com/img/documentation/checkout/marketplace.png',
@@ -68,9 +69,10 @@ db.child('functions').child(uid).once('value', function(snapshot){
   });
 
   $('#customButton').on('click', function(e) {
+    var d = document.getElementById("footer");d.className += " "
     handler.open({
-      name: 'Stripe.com',
-      description: '2 widgets',
+      name: domain,
+      description: 'Listing Service',
       amount: 10000
     });
     e.preventDefault();
