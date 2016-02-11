@@ -31,7 +31,7 @@ db.child('functions').child(uid).once('value', function(snapshot){    if (snapsh
 $('#customButton').on('click', function(e) {  $('#footer').removeClass('active'); handler.open({      name: domain,      description: 'Listing Service',      amount: 10000    });    e.preventDefault();  });  $(window).on('popstate', function() {    handler.close();  });
 </script>
 <script>
-$("#main").on("click", function(){
+$("#article").on("click", function(){
     alert($(this).text());
 });
 </script>
