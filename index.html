@@ -31,12 +31,6 @@ function health() {if (/fastur/i.test(localStorage.getItem('domain'))){var uid =
 <script>$('#voice').click(function(){  annyang.start();  var speak = $('#text').text();  var msg = new SpeechSynthesisUtterance(speak);window.speechSynthesis.speak(msg); });
 </script>
 
-<script>var ref = new Firebase("https://vct.firebaseio.com/organisations/voices/");
-ref.on("value", function(snapshot) {var newPost = snapshot.val();
-var replies = (newPost.papervct);
-$("description").append(replies);}
-);</script>
-
 <script>if (annyang) {domain = localStorage.getItem("domain");var commands = {'*term': function(term) {$("#message").append(" " + term);var url = "https://vct.firebaseio.com/organisations/" + domain +"/voices/"; var firebaseRef = new Firebase(url); var postRef = firebaseRef.push(); postRef.set({papervct: term});   }};annyang.addCommands(commands); }
 </script>
 
